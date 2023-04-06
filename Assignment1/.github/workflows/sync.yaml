@@ -1,11 +1,16 @@
-name: Sync Files
+name: Deployment
+
+concurrency: 
+  group: production
+  cancel-in-progress: true
+
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+
 jobs:
-  sync:
+  deployment:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
