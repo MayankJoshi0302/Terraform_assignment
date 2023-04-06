@@ -14,3 +14,5 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: git pull
+        run: /home/AzureAdmin/Myrepo/Terraform_assignment/Assignment1/ git pull
