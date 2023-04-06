@@ -15,4 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: git pull
-        run: /home/AzureAdmin/Myrepo/Terraform_assignment/Assignment1/ git pull
+        run: | 
+           cd /home/AzureAdmin/Myrepo/Terraform_assignment/Assignment1/
+           sudo git pull
