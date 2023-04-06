@@ -1,0 +1,16 @@
+name: Deployment
+
+concurrency: 
+  group: production
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deployment:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
